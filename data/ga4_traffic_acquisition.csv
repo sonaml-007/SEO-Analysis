@@ -1,0 +1,15 @@
+# ----------------------------------------
+# Traffic acquisition: Session primary channel group (Default Channel Group)
+# Account: ThinkMove Solutions
+# Property: ThinkMove Solutions
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260101
+# End date: 20260509
+Session primary channel group (Default Channel Group),Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+Direct,1721,223,0.12957582800697268,12.180127832655433,3.9622312608948285,6819,0,0,0
+Organic Search,1370,735,0.5364963503649635,42.53868613138686,5.072992700729927,6950,0,0,0
+Referral,202,86,0.42574257425742573,23.61881188118812,3.866336633663366,781,0,0,0
+Organic Social,70,30,0.42857142857142855,13.985714285714286,4.857142857142857,340,0,0,0
+Unassigned,34,6,0.17647058823529413,32.5,3.0588235294117645,104,0,0,0
