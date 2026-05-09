@@ -76,7 +76,7 @@ This pattern holds across the dataset: impression volume and engagement quality 
 ## Project structure
 
 ```text
-thinkmove-seo-analytics/
+seo-analytics-for-SAAS-website/
 │
 ├── data/
 │   ├── raw/                        # excluded via .gitignore
