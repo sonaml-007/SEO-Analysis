@@ -1,147 +1,92 @@
+SEO Analytics Intelligence System
+
+Cross-platform SEO and engagement analysis integrating Google Search Console and Google Analytics 4 to evaluate content performance across visibility, traffic, and engagement dimensions.
+
+> Data files are excluded from this repository (see `data/`). The notebook documents all column names, data formats, and transformation steps needed to reproduce the analysis with your own exports.
+
+---
+
 ## Overview
 
-This project is a cross-platform SEO analytics pipeline built using:
+This project builds a page-level analytics pipeline that merges two datasets most teams analyze in isolation — search visibility data from GSC and behavioral data from GA4. The core question: Does a page that ranks well actually satisfy the users who find it?
 
-* Google Search Console (GSC)
-* Google Analytics 4 (GA4)
-* Python
-* Pandas
-* Jupyter Notebook
-
-The objective of the project is to analyze the relationship between:
-
-* Search visibility
-* Organic traffic acquisition
-* User engagement
-* Content effectiveness
-
-The analysis integrates page-level SEO metrics from GSC with behavioral engagement metrics from GA4 to identify:
-
-* High-performing content clusters
-* Visibility vs engagement mismatches
-* Potential content optimization opportunities
-* Search intent alignment
+The analysis covers **74 matched pages** for five months (Jan–May 2026) and surfaces specific content optimization opportunities grounded in integrated metrics rather than single-source reporting.
 
 ---
 
-# Key Features
+## Key features
 
-## Data Integration
+### Data integration
+Merges page-level exports from two sources with different URL formats (GSC exports full URLs; GA4 exports relative paths). A normalization pipeline handles domain stripping, lowercasing, and trailing slash removal before joining on the `Page` key.
 
-Merged datasets from:
+**Google Search Console** — clicks · impressions · CTR · average position
 
-### Google Search Console
+**Google Analytics 4** — sessions · active users · new users · avg. engagement time · conversion signals
 
-* Clicks
-* Impressions
-* CTR
-* Average Position
+### Engineered metrics
 
-### Google Analytics 4
+| Metric | Formula | What it reveals |
+|--------|---------|----------------|
+| `visibility_score` | `impressions × CTR` | Effective reach weighted by click likelihood |
+| `click_to_session_ratio` | `ga_sessions / gsc_clicks` | Whether sessions come from organic search or other channels |
+| `engagement_efficiency` | `ga_engagement_time / ga_sessions` | Content quality signal — time invested per visit |
+| `engagement_per_session` | `ga_engagement_time` (per row) | Absolute engagement depth per page |
 
-* Sessions
-* Active Users
-* New Users
-* Engagement Time
-* Conversion Signals
+### Content classification
 
----
+A rule-based classifier segments pages into four categories:
 
-# Engineered Metrics
-
-Derived performance metrics include:
-
-| Metric                 | Description                                     |
-| ---------------------- | ----------------------------------------------- |
-| click_to_session_ratio | Relationship between search clicks and sessions |
-| visibility_score       | Composite visibility indicator                  |
-| engagement_efficiency  | Engagement quality relative to traffic          |
-| engagement_per_session | Average engagement depth                        |
+| Category | Criteria | What it means |
+|----------|----------|---------------|
+| High visibility / low engagement | impressions > 20,000 AND sessions < 100 | Ranks well, fails to satisfy intent |
+| High quality content | avg. engagement time > 30s | Users investing meaningful time |
+| High traffic driver | GSC clicks > 100 | Proven organic demand |
+| Normal | All other pages | Baseline performers |
 
 ---
 
-# Content Classification System
+## Key findings
 
-Pages are segmented into categories such as:
+### The visibility–engagement gap
 
-* High traffic driver
-* High-quality content
-* Normal
+The highest-impression page on the AWS Page at **80,547 impressions** — recorded only 17.7s average engagement time and an `engagement_efficiency` score of **0.03**. The Zoom product page, with 95% fewer impressions (4,076), recorded a **74s average engagement time** and an `engagement_efficiency` of **1.14** — nearly 40× higher.
 
-This helps identify:
+This pattern holds across the dataset: impression volume and engagement quality are weakly correlated, which has direct implications for where content investment should be directed.
 
-* Content attracting strong visibility
-* Pages with high user satisfaction
-* Underperforming pages requiring optimization
+### AWS content cluster
 
----
+- 80,547 impressions · 29 GSC clicks · 592 GA4 sessions · 17.7s avg. engagement
+- `click_to_session_ratio` of 20× indicates most sessions arrive from non-organic channels
+- Low CTR (0.04%) despite top-10 average position suggests a title/meta mismatch with search intent
 
-# Example Insights
+### Zoom content cluster
 
-## AWS Content Cluster
+- `/zoom`: 74s avg. engagement · `engagement_efficiency` 1.14 · 107 GSC clicks from 4,076 impressions
+- `/blogs/zoom-not-working-troubleshoot-guide`: 36.8s avg. engagement across 140 sessions
+- Troubleshooting and product pages consistently outperform informational AWS content on engagement metrics — strong evidence of intent alignment
 
-Observed:
+### PayPal in Nepal
 
-* Huge no. of impressions
-* Low CTR
-* Lower engagement efficiency
-
-Interpretation:
-High visibility informational content with weaker intent satisfaction.
+- 349 GSC clicks · avg. position 4.46 · 257 sessions · 215 new users
+- Near-threshold engagement time (29.6s) is consistent with high-intent informational queries where users find a direct answer quickly — not a signal of shallow engagement
+- Highest organic click volume of any page; strong candidate for conversion path optimization
 
 ---
 
-## Zoom Content Cluster
-
-Observed:
-
-* Strong engagement time
-* Higher engagement efficiency
-* Better CTR
-
-Interpretation:
-Problem-solving and high-intent content with stronger user satisfaction (especially on content about troubleshooting).
-
----
-
-## PayPal in Nepal Content
-
-Observed:
-
-* Strong click volume
-* High commercial intent
-* Consistent engagement
-
-Interpretation:
-Potential monetization and conversion-oriented traffic source.
-
----
-
-# Tech Stack
-
-| Tool             | Purpose                 |
-| ---------------- | ----------------------- |
-| Python           | Data processing         |
-| Pandas           | Data manipulation       |
-| Jupyter Notebook | Exploratory analysis    |
-| VS Code          | Development environment |
-| Git & GitHub     | Version control         |
-
----
-
-# Project Structure
+## Project structure
 
 ```text
 thinkmove-seo-analytics/
 │
 ├── data/
-│   ├── raw/
+│   ├── raw/                        # excluded via .gitignore
 │   │   ├── gsc_pages.csv
 │   │   ├── gsc_queries.csv
 │   │   └── ga4_landing_page.csv
+│   └── README.md                   # data schema and export instructions
 │
 ├── notebooks/
-│   └── analysis.ipynb
+│   └── analysis.ipynb              # full pipeline: cleaning → merging → KPIs → classification
 │
 ├── outputs/
 │   ├── charts/
@@ -155,54 +100,41 @@ thinkmove-seo-analytics/
 
 ---
 
-# Setup Instructions
-
-## 1. Clone Repository
+## Setup
 
 ```bash
 git clone https://github.com/sonaml-007/SEO-Analysis.git
-```
-
-## 2. Install Dependencies
-
-```bash
+cd SEO-Analysis
 pip install -r requirements.txt
-```
-
-## 3. Launch Jupyter Notebook
-
-```bash
 python -m notebook
 ```
 
----
-
-# Recommended requirements.txt
-
-```text
-pandas
-numpy
-matplotlib
-seaborn
-jupyter
-notebook
-```
+To reproduce the analysis, export your own GSC (Pages report) and GA4 (Landing pages report) CSVs and place them in `data/raw/`. Column names and expected formats are documented in `data/README.md`.
 
 ---
 
-# Future Improvements
+## Tech stack
 
-Planned extensions include:
-
-* Ahrefs keyword integration
-* SEMrush competitive analysis
-* Content opportunity scoring
-* SEO quadrant visualization model
-* Executive dashboard layer
-* Search intent clustering
+| Tool | Purpose |
+|------|---------|
+| Python | Data processing |
+| Pandas | Data cleaning, merging, feature engineering |
+| Jupyter Notebook | Exploratory analysis and documentation |
+| VS Code | Development environment |
+| Git & GitHub | Version control |
 
 ---
 
-# Author
+## Future improvements
 
-Sonam Lama
+- Search intent clustering using NLP to make engagement thresholds intent-aware
+- SEO quadrant visualization (impressions × engagement matrix)
+- Ahrefs / SEMrush keyword integration for opportunity scoring
+- Automated GSC + GA4 merge pipeline for monthly reporting
+- Executive dashboard layer
+
+---
+
+## Author
+
+**Sonam Lama**  
