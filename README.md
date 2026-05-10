@@ -107,19 +107,23 @@ Plotting impressions against engagement efficiency reveals four distinct perform
 ```text
 seo-analytics-intelligence-system/
 │
-├── data/
-│   ├── raw/                        # excluded via .gitignore
-│   │   ├── gsc_pages.csv
-│   │   ├── gsc_queries.csv
-│   │   └── ga4_landing_page.csv
+├── data/                           # excluded via .gitignore
+│   ├── gsc_pages.csv
+│   ├── gsc_queries.csv
+│   ├── ga4_landing_page.csv
+│   ├── aws_bedrock_queries.csv
+│   ├── aws_updates_queries.csv
+│   ├── paypal_in_nepal_queries.csv
+│   ├── zoom_queries.csv
+│   ├── zoom_troubleshoot_queries.csv
+│   └── zoom_discord_queries.csv
 │   └── README.md                   # data schema and export instructions
 │
 ├── notebooks/
 │   └── analysis.ipynb              # full pipeline: cleaning → merging → KPIs → classification
 │
 ├── output/
-│   ├── charts/
-│   └── tables/
+│   └── charts/
 │
 ├── .gitignore
 ├── LICENSE
