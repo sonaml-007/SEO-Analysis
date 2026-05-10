@@ -127,8 +127,8 @@ seo-analytics-intelligence-system/
 │
 ├── .gitignore
 ├── LICENSE
-├── requirements.txt
-└── README.md
+├── README.md 
+└── requirements.txt
 ```
 
 ---
