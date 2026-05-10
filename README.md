@@ -117,7 +117,7 @@ seo-analytics-intelligence-system/
 ├── notebooks/
 │   └── analysis.ipynb              # full pipeline: cleaning → merging → KPIs → classification
 │
-├── outputs/
+├── output/
 │   ├── charts/
 │   └── tables/
 │
