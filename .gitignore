@@ -6,5 +6,5 @@ Thumbs.db
 .env
 venv/
 .venv/
-data/
+data/*
 !data/README.md
