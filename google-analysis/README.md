@@ -1,4 +1,4 @@
-# SEO Analytics Intelligence System
+# Google Search Analytics Intelligence System
 
 Cross-platform SEO and engagement analysis integrating Google Search Console and Google Analytics 4 to evaluate content performance across visibility, traffic, and engagement dimensions.
 
