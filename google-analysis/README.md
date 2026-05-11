@@ -1,4 +1,4 @@
-# SEO Analytics Intelligence System
+# Google Search Analytics Intelligence System
 
 Cross-platform SEO and engagement analysis integrating Google Search Console and Google Analytics 4 to evaluate content performance across visibility, traffic, and engagement dimensions.
 
@@ -98,7 +98,7 @@ Both `/zoom` and `/blogs/simple-comparison-of-zoom-vs-discord` are dominated by 
 
 Plotting impressions against engagement efficiency reveals four distinct performance zones. Bubble size represents session volume.
 
-![Content Performance Quadrant](output/charts/quadrant_plot.png)
+![Content Performance Quadrant](output/chart/quadrant_plot.png)
 
 ---
 
