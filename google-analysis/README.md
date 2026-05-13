@@ -216,7 +216,7 @@ However, their engagement efficiency differs by nearly 27×.
 
 This demonstrates that:
 
-> intent classification alone does not determine success — execution quality and content specificity matter substantially more.
+> intent classification alone does not determine success. Execution quality and content specificity matter substantially more.
 
 ---
 
@@ -224,7 +224,7 @@ This demonstrates that:
 
 `/blogs/paypal-in-nepal`
 
-showed a strong concentration of geographically qualified queries such as:
+showed a strong concentration of geographically qualified queries, such as:
 
 - "paypal in nepal"
 - "is paypal available in nepal"
