@@ -380,6 +380,3 @@ All expected column names and formats are documented inside the notebook.
 # Author
 
 **Sonam Lama**
-
-```
-```
