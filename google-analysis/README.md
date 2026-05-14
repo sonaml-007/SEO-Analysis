@@ -317,7 +317,7 @@ SEO-Analysis/
 │
 ├── google-analysis/
 │   ├── notebook/
-│   │   └── seo-analysis.ipynb
+│   │   └── google-seo-analysis.ipynb
 │   │
 │   └── output/
 │       └── chart/
@@ -358,7 +358,7 @@ To reproduce the analysis:
 2. Place files inside the `data/` directory.
 
 3. Run the notebook pipeline from:
-   `google-analysis/notebook/seo-analysis.ipynb`
+   `google-analysis/notebook/google-seo-analysis.ipynb`
 
 All expected column names and formats are documented inside the notebook.
 
