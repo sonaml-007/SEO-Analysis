@@ -24,7 +24,7 @@ SEO-Analysis/
 │
 ├── google-analysis/
 │   ├── notebook/
-│   │   └── seo-analysis.ipynb
+│   │   └── googel-seo-analysis.ipynb
 │   └── output/
 │       └── chart/
 │           └── quadrant_plot.png
