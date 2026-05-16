@@ -250,7 +250,7 @@ The project visualizes content positioning using:
 
 This reveals distinct performance clusters and optimization priorities.
 
-![Content Performance Quadrant](output/chart/quadrant_plot.png)
+![Content Performance Quadrant](output-google/chart/quadrant_plot.png)
 
 ---
 
@@ -295,7 +295,7 @@ These represent the highest-leverage optimization candidates.
 
 The final visualization ranks the top content optimization opportunities across the dataset.
 
-![Opportunity Score Ranking](output/chart/opportunity_score.png)
+![Opportunity Score Ranking](output-google/chart/opportunity_score.png)
 
 ---
 
@@ -316,10 +316,10 @@ SEO-Analysis/
 │   └── zoom_discord_queries.csv
 │
 ├── google-analysis/
-│   ├── notebook/
+│   ├── notebook-google/
 │   │   └── google-seo-analysis.ipynb
 │   │
-│   └── output/
+│   └── output-google/
 │       └── chart/
 │           ├── quadrant_plot.png
 │           └── opportunity_score.png
@@ -358,7 +358,7 @@ To reproduce the analysis:
 2. Place files inside the `data/` directory.
 
 3. Run the notebook pipeline from:
-   `google-analysis/notebook/google-seo-analysis.ipynb`
+   `google-analysis/notebook-google/google-seo-analysis.ipynb`
 
 All expected column names and formats are documented inside the notebook.
 
