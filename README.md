@@ -11,9 +11,9 @@ The project is structured across four milestones, each analyzing a different dat
 | Milestone | Focus | Status |
 |-----------|-------|--------|
 | [Milestone 1 — Visibility vs Value](./google-analysis/) | GSC × GA4 integrated analysis | ✅ Completed |
-| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | 🔄 Planned |
-| Milestone 3 — Microsoft Clarity | User behavior and heatmap analysis | 🔄 Planned |
-| Milestone 4 — Cross-tool Coherence | Unified scoring across all tools | 🔄 Planned |
+| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | 🔄 In Progress |
+| Milestone 3 — Microsoft Clarity | User behavior and heatmap analysis | Planned |
+| Milestone 4 — Cross-tool Coherence | Unified scoring across all tools | Planned |
 
 ---
 
