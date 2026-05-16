@@ -23,9 +23,9 @@ The project is structured across four milestones, each analyzing a different dat
 SEO-Analysis/
 │
 ├── google-analysis/
-│   ├── notebook/
+│   ├── notebook-google/
 │   │   └── googel-seo-analysis.ipynb
-│   └── output/
+│   └── output-google/
 │       └── chart/
 │           └── quadrant_plot.png
 │   └──README.md
