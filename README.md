@@ -24,13 +24,20 @@ SEO-Analysis/
 │
 ├── google-analysis/
 │   ├── notebook-google/
-│   │   └── googel-seo-analysis.ipynb
+│   │   └── google-seo-analysis.ipynb
 │   └── output-google/
 │       └── chart/
 │           └── quadrant_plot.png
 │   └──README.md
 │  
-├── ahrefs-analysis/          # planned
+├── ahrefs-analysis/         # In Progress
+│   ├── notebook-ahrefs/
+│   │   └── ahrefs-seo-analysis.ipynb
+│   └── output-ahrefs/
+│       └── chart/
+│           └── kd_vs_volume.png
+│           └── keyword_opportunity.png
+│           └── position_vs_kd.png        
 ├── clarity-analysis/         # planned
 ├── coherence-analysis/       # planned
 │
