@@ -130,6 +130,7 @@ ahrefs-analysis/
         ├── keyword_opportunity.png
         ├── ahrefs_vs_ga4.png
         └── page_ranking_efficiency.png
+└── README.md
 ```
 
 ---
@@ -146,4 +147,5 @@ ahrefs-analysis/
 
 ---
 **Author**
+
 Sonam Lama
