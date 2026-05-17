@@ -51,7 +51,8 @@ SEO-Analysis/
 │
 ├── .gitignore
 ├── requirements.txt
-└── README.md```
+└── README.md
+```
 
 ---
 
