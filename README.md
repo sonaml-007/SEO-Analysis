@@ -11,7 +11,7 @@ The project is structured across four milestones, each analyzing a different dat
 | Milestone | Focus | Status |
 |-----------|-------|--------|
 | [Milestone 1 — Visibility vs Value](./google-analysis/) | GSC × GA4 integrated analysis | ✅ Completed |
-| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | 🔄 In Progress |
+| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | ✅ Completed |
 | Milestone 3 — Microsoft Clarity | User behavior and heatmap analysis | Planned |
 | Milestone 4 — Cross-tool Coherence | Unified scoring across all tools | Planned |
 
@@ -22,7 +22,7 @@ The project is structured across four milestones, each analyzing a different dat
 ```text
 SEO-Analysis/
 │
-├── google-analysis/
+├── google-analysis/        # Completed
 │   ├── notebook-google/
 │   │   └── google-seo-analysis.ipynb
 │   └── output-google/
@@ -37,7 +37,11 @@ SEO-Analysis/
 │       └── chart/
 │           └── kd_vs_volume.png
 │           └── keyword_opportunity.png
-│           └── position_vs_kd.png        
+│           └── position_vs_kd.png
+│           └── ahrefs_vs_ga4.png
+│           └── page_ranking_efficiency.png
+│   └── README.md
+│        
 ├── clarity-analysis/         # planned
 ├── coherence-analysis/       # planned
 │
