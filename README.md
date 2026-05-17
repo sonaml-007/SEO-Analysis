@@ -10,8 +10,8 @@ The project is structured across four milestones, each analyzing a different dat
 
 | Milestone | Focus | Status |
 |-----------|-------|--------|
-| [Milestone 1 — Visibility vs Value](./google-analysis/) | GSC × GA4 integrated analysis | ✅ Completed |
-| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | ✅ Completed |
+| [Milestone 1 — Visibility vs Value](./google-analysis/) | GSC × GA4 integrated analysis | ✅ In progress |
+| Milestone 2 — Ahrefs Analysis | Keyword difficulty and competition | ✅ In progress |
 | Milestone 3 — Microsoft Clarity | User behavior and heatmap analysis | Planned |
 | Milestone 4 — Cross-tool Coherence | Unified scoring across all tools | Planned |
 
@@ -22,36 +22,36 @@ The project is structured across four milestones, each analyzing a different dat
 ```text
 SEO-Analysis/
 │
-├── google-analysis/        # Completed
+├── google-analysis/
 │   ├── notebook-google/
 │   │   └── google-seo-analysis.ipynb
-│   └── output-google/
-│       └── chart/
-│           └── quadrant_plot.png
-│   └──README.md
-│  
-├── ahrefs-analysis/         # In Progress
+│   ├── output-google/
+│   │   └── chart/
+│   │       ├── quadrant_plot.png
+│   │       └── opportunity_score.png
+│   └── README.md
+│
+├── ahrefs-analysis/
 │   ├── notebook-ahrefs/
 │   │   └── ahrefs-seo-analysis.ipynb
-│   └── output-ahrefs/
-│       └── chart/
-│           └── kd_vs_volume.png
-│           └── keyword_opportunity.png
-│           └── position_vs_kd.png
-│           └── ahrefs_vs_ga4.png
-│           └── page_ranking_efficiency.png
+│   ├── output-ahrefs/
+│   │   └── chart/
+│   │       ├── kd_vs_volume.png
+│   │       ├── keyword_opportunity.png
+│   │       ├── position_vs_kd.png
+│   │       ├── ahrefs_vs_ga4.png
+│   │       └── page_ranking_efficiency.png
 │   └── README.md
-│        
+│
 ├── clarity-analysis/         # planned
 ├── coherence-analysis/       # planned
 │
-├── data/                     # excluded via .gitignore
+├── data/
 │   └── README.md
 │
 ├── .gitignore
 ├── requirements.txt
-└── README.md
-```
+└── README.md```
 
 ---
 
