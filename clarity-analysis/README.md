@@ -10,7 +10,7 @@ User behavior and session quality analysis using Microsoft Clarity data for a Ne
 
 Where the analysis for Google measured search visibility and engagement metrics, and the Ahrefs analysis measured competitive keyword positioning, the analysis for Clarity introduces behavioral data: how users actually interact with pages after arriving. 
 
-Microsoft Clarity provides session-level behavioral signals including scroll depth, click patterns, traffic sources, smart events, and Core Web Vitals performance scores.
+Microsoft Clarity provides session-level behavioral signals, including scroll depth, click patterns, traffic sources, smart events, and Core Web Vitals performance scores.
 
 **Dataset:** Single multi-section Clarity CSV export  
 **Total sessions:** 1,876 reported · 1,304 real (bot-adjusted)  
@@ -60,11 +60,11 @@ AI referrers account for 7.1% of real sessions (92 sessions) across Gemini, Chat
 
 ### 2. Behavioral signals
 
-Quick back clicks at 3.78% (71 sessions) is the dominant negative behavioral signal, which is users landing and immediately returning to the previous page. 
+Quick back clicks at 3.78% (71 sessions) are the dominant negative behavioral signal, which is users landing and immediately returning to the previous page. 
 
-This directly supports the intent mismatch finding from the Google analysis, where high-impression pages showed weak engagement efficiency. The 4.844s LCP (see Web Vitals) likely contributes to this figure — users clicking back before the page finishes loading.
+This directly supports the intent mismatch finding from the Google analysis, where high-impression pages showed weak engagement efficiency. The 4.844s LCP (see Web Vitals) likely contributes to this figure as users are clicking back before the page finishes loading.
 
-Zero rage clicks indicates the UI itself is not causing frustration. The issue is content and performance, not interface design.
+Zero rage clicks indicate the UI itself is not causing frustration. The issue is content and performance, not interface design.
 
 ![Behavioral Signals and Smart Events](output-clarity/chart/behavioral_signals.png)
 
@@ -95,7 +95,7 @@ Pages with closest Clarity/GA4 agreement tend to be the most organically driven.
 | INP (Interaction to Next Paint) | 152ms | Good (threshold: ≤200ms) |
 | CLS (Cumulative Layout Shift) | 0.232 | Needs improvement (threshold: ≤0.1) |
 
-LCP at 4.844s is the most critical technical issue. This is nearly double the poor threshold. Slow initial load directly contributes to quick back clicks and low scroll depth. CLS at 0.232 indicates layout instability during page load, degrading user experience. INP is the only passing metric, meaning the site responds well to interactions once loaded.
+LCP at 4.844s is the most critical technical issue. This is nearly double the threshold. Slow initial load directly contributes to quick back clicks and low scroll depth. CLS at 0.232 indicates layout instability during page load, degrading user experience. INP is the only passing metric, meaning the site responds well to interactions once loaded.
 
 ![Core Web Vitals](output-clarity/chart/core_web_vitals.png)
 
@@ -108,7 +108,7 @@ LCP at 4.844s is the most critical technical issue. This is nearly double the po
 | Pages per session | 1.23 | ~2.0 |
 | Quick back rate | 3.78% | ~2.0% |
 
-All four metrics underperform general reference points. The pattern is consistent: slow load times drive quick exits, low scroll depth suggests users aren't reaching the main content, and minimal pages per session indicates little site exploration beyond the landing page.
+All four metrics underperform general reference points. The pattern is consistent: slow load times drive quick exits, low scroll depth suggests users aren't reaching the main content, and minimal pages per session indicate little site exploration beyond the landing page.
 
 ![Session Quality Metrics](output-clarity/chart/session_quality.png)
 
@@ -147,6 +147,6 @@ clarity-analysis/
 
 ## Next milestone
 
-**Cross-tool Coherence Analysis** will synthesize findings across all three milestones — GSC, GA4, Ahrefs, and Clarity — to test whether the tools tell a consistent story about content performance, or where they meaningfully disagree.
+**Cross-tool Coherence Analysis** will synthesize findings across all three milestones (GSC, GA4, Ahrefs, and Clarity) to test whether the tools tell a consistent story about content performance, or where they meaningfully disagree.
 
 ---
