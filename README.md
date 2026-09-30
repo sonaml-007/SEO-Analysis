@@ -19,7 +19,7 @@ The project is structured across four milestones, each analyzing a different dat
 
 ## Headline finding
 
-Four independent analytical approaches — search visibility, behavioral engagement, competitive keyword positioning, and on-site user behavior — converge on the same conclusion: the AWS content cluster (`aws-in-2026-latest-services-updates`, `amazon-bedrock-aws-ai-platform-guide`) is the site's single largest optimization opportunity. High search visibility is not being converted into user satisfaction, and this is confirmed independently across all four tools.
+I tested four independent analytical approaches: search visibility, behavioral engagement, competitive keyword positioning, and on-site user behavior. These converge on the same conclusion: the AWS content cluster (`aws-in-2026-latest-services-updates`, `amazon-bedrock-aws-ai-platform-guide`) is the site's single largest optimization opportunity. High search visibility is not being converted into user satisfaction, and this is confirmed independently across all four tools.
 
 See [Milestone 4](./coherence-analysis/) for the full cross-tool synthesis.
 
