@@ -8,9 +8,9 @@ Unified SEO intelligence synthesizing Google Search Console, Google Analytics 4,
 
 ## Overview
 
-This is the capstone milestone of the project. Milestones 1–3 analyzed search visibility, behavioral engagement, competitive positioning, and user behavior independently. This milestone tests whether those four tools tell a **consistent** story about content performance — and builds a single unified score where they agree.
+This is the capstone milestone of the project. Milestones 1–3 analyzed search visibility, behavioral engagement, competitive positioning, and user behavior independently. This milestone tests whether those four tools tell a consistent story about content performance. It also builds a single unified score where they agree.
 
-**Core question:** Do GSC, GA4, Ahrefs, and Clarity agree on which pages perform well — and where they disagree, what does that disagreement reveal?
+**Core question:** Do GSC, GA4, Ahrefs, and Clarity agree on which pages perform well? Where do they disagree, and what does that disagreement reveal?
 
 **Pages analyzed:** 13 pages with data from 2 or more tools
 
@@ -22,7 +22,7 @@ This is the capstone milestone of the project. Milestones 1–3 analyzed search 
 Page-level metrics from all three milestones were merged on a normalized `Page` key using an outer join, then filtered to pages with coverage from at least 2 of the 3 external tools (GSC/GA4 counted as one source, Ahrefs as a second, Clarity as a third).
 
 ### 2. Coherence scoring
-For each page, performance was percentile-ranked independently within each tool's own metric (GSC impressions, GA4 sessions, Ahrefs traffic, Clarity sessions). The standard deviation across these ranks was computed per page — low spread means the tools agree on relative performance; high spread means they disagree.
+For each page, performance was percentile-ranked independently within each tool's own metric (GSC impressions, GA4 sessions, Ahrefs traffic, Clarity sessions). The standard deviation across these ranks was computed per page. Low spread means the tools agree on relative performance, while high spread means they disagree.
 
 ```
 coherence_score = 1 - std(percentile_ranks across tools)
@@ -51,7 +51,7 @@ Three pages show both high traffic rank and high cross-tool agreement:
 | amazon-bedrock-aws-ai-platform-guide | 0.81 | 0.96 |
 | paypal-in-nepal | 0.84 | 0.92 |
 
-Every tool independently confirms these are the highest-traffic pages on the site. This is the highest-confidence segment of the analysis — no measurement artifact explains their prominence.
+Every tool independently confirms these are the highest-traffic pages on the site. This is the highest-confidence segment of the analysis, but no measurement artifact explains their prominence.
 
 ### 2. The most contested page
 
@@ -67,7 +67,7 @@ A 473× spread between Ahrefs and Clarity on the same page. This page receives a
 
 ### 3. Confirmed underperformer across every signal
 
-`/blogs/fix-zoom-audio-mic-speaker-issue-fast` scores low on both rank (0.31) and coherence (0.72) — meaning it's confirmed low-traffic by multiple tools, but the tools also disagree about exactly how low. Combined with the Milestone 2 finding that this page sits on three near-zero-competition keywords worth 6,500+ combined search volume, this page represents a confirmed, multi-signal optimization target.
+`/blogs/fix-zoom-audio-mic-speaker-issue-fast` scores low on both rank (0.31) and coherence (0.72). This means that the page is confirmed low-traffic by multiple tools, but the tools also disagree about exactly how low. Combined with the Milestone 2 finding that this page sits on three near-zero-competition keywords worth 6,500+ combined search volume, this page represents a confirmed, multi-signal optimization target.
 
 ![Cross-Tool Coherence Map](output-coherence/chart/coherence_map.png)
 
@@ -96,7 +96,7 @@ Combining visibility, engagement gap, and coherence into one score produces a cl
 | 3 — Clarity | Identified the technical (LCP) and behavioral (quick back clicks) causes behind the engagement gap |
 | 4 — Coherence | Confirmed the AWS cluster finding independently across all tools, and surfaced which pages have unreliable, tool-dependent metrics |
 
-The convergence of four independent analytical approaches on the same conclusion — that the AWS content cluster is the primary optimization priority — is the strongest possible evidence for that recommendation.
+The convergence of four independent analytical approaches on the same conclusion, i.e., the AWS content cluster is the primary optimization priority, is shown by the strongest possible evidence for that recommendation.
 
 ---
 
